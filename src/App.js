@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import Canvas from './components/Canvas'
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Lizard Puncher!</h1>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Canvas/>
+    );
+  }
 }
+
+App.propTypes = {
+  message: PropTypes.string.isRequired,
+};
 
 export default App;
